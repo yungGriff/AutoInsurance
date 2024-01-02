@@ -1,0 +1,1 @@
+The objective of this program seems to be creating an auto insurance calculator with a graphical user interface (GUI) that allows users to input information about the driver, vehicle, and insurance preferences. The program then calculates an estimated monthly insurance fee based on the provided information and displays the result in the GUI.
