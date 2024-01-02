@@ -114,8 +114,8 @@ public class autoInsurance {
         int genderRate = femaleRadioButton.isSelected() ? 1 : 2;
         int vehicleTypeX = vehicleTypeComboBox.getSelectedIndex() + 1;
 
-        // Your existing logic
-        if (driverAge == 18) {
+        
+        if (driverAge <= 18) {
             storedAge = 4;
         } else if (driverAge <= 25) {
             storedAge = 2;
@@ -176,9 +176,14 @@ public class autoInsurance {
                 // Default report
                 System.out.println("Always a Silver Lining");
         }
-
+        
         int monthlyFee = ((coverageCost * colorCost * carCost * genderRate * storedAge) / 12);
-        resultTextArea.setText("Your auto insurance quote estimate is priced at: " + monthlyFee + "$ per month.");
+        String resultMessage = "Your auto insurance quote estimate is priced at: ";
+
+        // Append the monthlyFee on a new line
+        resultMessage += "\n $" + monthlyFee + " per month.";
+
+        resultTextArea.setText(resultMessage);
 
         // Additional code for writing to file if needed
     }
